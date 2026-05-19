@@ -1,0 +1,15 @@
+name: sbdd_project
+
+dependencies:
+
+- python=3.10
+
+- pandas
+
+- numpy
+
+- biopython
+
+- seaborn
+
+- openmm
