@@ -1,205 +1,99 @@
-# Structural Bioinformatics and Drug Discovery Project
+# Structure-Guided Design of siRNA Therapeutics Targeting IL6
 
-## Structure-Guided Design and Specificity-Aware Evaluation of siRNA Therapeutics Targeting IL6 in Allergic Adenoid Hypertrophy with Integration of IL4–IL13 Axis
-
-**Author:** Meenakshi Gubba (SE24UCAB021)  
-**Course:** CB2207 – Structural Bioinformatics and Drug Discovery  
-**Institution:** Mahindra University  
-**Semester:** 2nd Year, 2nd Semester  
+Computational workflow for identifying and prioritizing IL6-targeting siRNA candidates using transcript retrieval, secondary structure prediction, accessibility analysis, thermodynamic ranking, specificity assessment and visualization.
 
 ---
 
-## Project Overview
+## Project Workflow
 
-This project focuses on the computational design and evaluation of **small interfering RNA (siRNA)** candidates targeting **Interleukin-6 (IL6)**, an important cytokine involved in inflammatory signaling associated with allergic adenoid hypertrophy.
-
-The workflow integrates biological understanding of the **IL4–IL13–IL6 inflammatory axis** with structural bioinformatics approaches to identify potentially effective IL6-targeting siRNA molecules.
-
-The study combines sequence analysis, RNA structure prediction, thermodynamic evaluation, duplex interaction analysis, specificity screening, and biological interpretation.
-
----
-
-## Objectives
-
-The project aims to:
-
-- Retrieve canonical IL6 transcript sequences
-- Generate candidate siRNAs targeting IL6
-- Predict RNA secondary structure
-- Identify accessible binding regions
-- Evaluate siRNA–mRNA duplex interactions
-- Rank candidates using thermodynamic properties
-- Assess potential off-target effects
-- Interpret findings within inflammatory cytokine pathways
-- Explore possible localized therapeutic delivery strategies
+1. Transcript retrieval (NCBI)
+2. siRNA candidate generation (siDirect)
+3. Secondary structure prediction (RNAfold)
+4. Duplex interaction analysis (RNAduplex)
+5. Thermodynamic ranking
+6. Off-target analysis (BLAST)
+7. Biological interpretation
+8. Visualization
+9. Conceptual delivery strategies
 
 ---
 
-## Workflow
+## Folder Structure
 
-```text
-IL6 Transcript Retrieval (NCBI)
-            ↓
-siRNA Candidate Generation (siDirect)
-            ↓
-RNA Secondary Structure Prediction (RNAfold)
-            ↓
-Accessible Region Identification
-            ↓
-siRNA–mRNA Duplex Analysis (RNAduplex)
-            ↓
-Thermodynamic Ranking
-            ↓
-BLAST Off-target Screening
-            ↓
-Biological Interpretation
-            ↓
-Candidate Prioritization
-```
+data/
+figures/
+literature_review/
+notebooks/
+proposal/
+report/
+results/
+scripts/
 
 ---
 
-## Tools and Libraries Used
+## Installation
 
-### Databases
+Create environment:
 
-- NCBI Entrez
-- NCBI RefSeq
-- NCBI BLAST
-
-### Bioinformatics Tools
-
-- siDirect 2.0
-- ViennaRNA (RNAfold)
-- ViennaRNA (RNAduplex)
-
-### Python Libraries
-
-- BioPython
-- Pandas
-- NumPy
-- Matplotlib
-- OS
-- Shutil
+pip install -r requirements.txt
 
 ---
 
-## Project Structure
+## Required Packages
 
-```text
-SBDD_Project/
-
-├── data/
-│       IL6_mRNA.fasta
-│
-├── figures/
-│       RNA structure plots
-│       Cytokine pathway figures
-│
-├── results/
-│       transcript_info.csv
-│       siRNA_candidates.csv
-│       ranked_siRNA.csv
-│       final_ranked_siRNA.csv
-│       duplex_results.csv
-│       blast_hits.csv
-│       accessible_regions.csv
-│       md_stability.csv
-│
-├── scripts/
-│       02_sidirect_design.py
-│       03_rnafold_prediction.py
-│       04_duplex_analysis.py
-│       05_stability_analysis.py
-│       06_offtarget_analysis.py
-│
-├── notebooks/
-│       SBDD_Meenakshi.ipynb
-│
-├── proposal/
-│       Project Proposal.docx
-│
-├── report/
-│       Final Project Report.pdf
-│
-└── README.md
-```
+pandas  
+numpy  
+matplotlib  
+seaborn  
+biopython  
+selenium  
+viennarna  
+openmm
 
 ---
 
-## Major Findings
+## How to Run
 
-The computational workflow identified multiple IL6-targeting siRNA candidates showing:
+Run notebook:
 
-- Favorable thermodynamic asymmetry
-- Accessible target regions
-- Stable predicted duplex formation
-- Strong interaction energies
-- Potential therapeutic relevance
+notebooks/SBDD_Meenakshi.ipynb
 
-The findings suggest that selected candidates may contribute to reducing IL6-mediated inflammatory signaling. However, additional validation is required before therapeutic application.
+Generate figures:
+
+notebooks/SBDD_Visualizations.ipynb
 
 ---
 
-## Limitations
+## Outputs
 
-This study is entirely computational and therefore has several limitations:
+Generated files include:
 
-- No experimental (in vitro/in vivo) validation
-- Approximate stability assessment instead of full molecular dynamics simulation
-- Limited off-target prediction
-- Biological effects inferred from literature rather than experimental evidence
-
-Results should therefore be interpreted as **preliminary computational predictions**.
-
----
-
-## Future Work
-
-Future improvements may include:
-
-- Experimental validation of top-ranked siRNA candidates
-- Advanced molecular dynamics simulations
-- Improved off-target prediction methods
-- Investigation of nanoparticle-based delivery systems
-- Expanded analysis of IL4–IL13–IL6 cytokine interactions
+- ranked_siRNA.csv
+- duplex_results.csv
+- final_ranked_siRNA.csv
+- blast_hits.csv
+- visualization PDFs
 
 ---
 
-## Conclusion
+## Known Limitations
 
-This project demonstrates how computational structural bioinformatics approaches can support early-stage therapeutic design. The workflow integrates transcript analysis, RNA structure prediction, thermodynamic ranking, and biological interpretation to prioritize potential IL6-targeting siRNA therapeutics.
-
-The study highlights both the potential and limitations of computational pipelines in RNA therapeutic development.
+- Selenium automation occasionally timed out
+- Full molecular dynamics simulations not completed
+- Off-target predictions remain computational
+- Experimental validation absent
 
 ---
 
 ## References
 
-Key literature includes studies on:
-
-- RNA therapeutics
-- IL6 signaling pathways
-- IL4–IL13 inflammatory mechanisms
-- siRNA design principles
-
-Full citations are available in the final report.
+Reynolds et al., 2004  
+Elbashir et al., 2001  
+Birmingham et al., 2006
 
 ---
 
-## Acknowledgement
+Author:
 
-This work was completed as part of:
-
-**CB2207 – Structural Bioinformatics and Drug Discovery**  
-Mahindra University
-
-The project combines concepts from computational biology, bioinformatics, RNA therapeutics, and structural analysis for academic research purposes.
-
----
-
-## Author
-
-**Meenakshi Gubba**  
-SE24UCAB021  
-Mahindra University
+Meenakshi Gubba  
+SE24UCAB021
